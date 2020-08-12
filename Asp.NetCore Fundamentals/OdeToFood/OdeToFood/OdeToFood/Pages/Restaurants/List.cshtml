@@ -34,6 +34,9 @@
                 <a class="btn btn-lg" asp-page="./Edit" asp-route-restaurantId="@restaurant.Id">
                     <i class="glyphicon glyphicon-edit"></i>
                 </a>
+                <a class="btn btn-lg" asp-page="./Delete" asp-route-restaurantId="@restaurant.Id">
+                                    <i class="glyphicon glyphicon-trash"></i>
+                                </a>
             </td>
         </tr>
     }
@@ -41,4 +44,6 @@
 
 <a asp-page=".\Edit" class="btn btn-primary">Add New</a>
 
-<div>@Model.Message</div>
+@section footer {
+    <div>@Model.Message</div>
+}
